@@ -19,6 +19,6 @@ class VentePage(admin.ModelAdmin):
 admin.site.register(Vente, VentePage)
 
 
-class ClientPage(admin.site.register):
+class ClientPage(admin.ModelAdmin):
     list_display = ("nom", "prenoms", "contact", "email")
 admin.site.register(Client, ClientPage)
