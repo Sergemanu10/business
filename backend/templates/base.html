@@ -49,14 +49,11 @@
   </div>
 </nav>
 
-   <div class="container">
-     <h1>Bienvenue sur mon site</h1>
-     <h2>Aujourd'hui, nous sommes le {{date|date:"d F Y" }}</h2>
-     <h3>Il est actuellement {{date|date:"H\hi"}}</h3>
-   </div>
-        {% block content%} {% endblock content%}
+
+
     <script src="{% static 'backend/js/jquery.js' %}"></script>
     <script src="{% static 'backend/js/bootstrap.js' %}"></script>
     <script src="{% static 'backend/js/popper.js' %}"></script>
+    {% block content%} {% endblock content%}
 </body>
 </html>
