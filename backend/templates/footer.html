@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Pied de page</title>
+</head>
+<body>
+
+
+    </div>
+    <div class="container">
+        <footer class="bg-light py-4 mt-5 border-top">
+          <div class="container text-center">
+            <div class="row justify-content-center mb-3">
+              {% for partenaire in partenaires %}
+                <div class="col-4 col-sm-2 mb-3">
+                  <img src="{{ partenaire.logo.url }}" alt="{{ partenaire.nom }}" class="img-fluid" style="max-height: 50px;">
+                </div>
+              {% endfor %}
+            </div>
+            <p class="text-muted small mb-0">&copy; 2025 {{ site_nom|default:"Business" }}. Tous droits réservés.</p>
+          </div>
+        </footer>
+    </div>
+
+
+</body>
+</html>

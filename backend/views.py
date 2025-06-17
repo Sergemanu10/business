@@ -1,5 +1,6 @@
 from datetime import datetime
 from django.shortcuts import render
+from .models import Partenaire
 
 # Create your views here.
 
@@ -19,3 +20,15 @@ def client(request):
 
 def vente(request):
     return render(request, 'vente.html')
+
+
+def footer(request):
+    partenaires = Partenaire.objects.all()[:5] # Les 5 premiers partenaires
+    context = {
+        'partenaire': partenaires,
+        'nom_site': 'business'
+    }
+    return render(request, 'footer.html', context)
+
+def contact(request):
+    return (request, 'contact.html')

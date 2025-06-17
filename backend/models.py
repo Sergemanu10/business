@@ -23,3 +23,16 @@ class Client(models.Model):
     prenoms = models.CharField(max_length=100, unique=True, null=False)
     contact = models.CharField(max_length=20, null=False)
     email = models.EmailField()
+
+
+class Partenaire(models.Model):
+    nom = models.CharField(max_length=100)
+    logo = models.ImageField(upload_to='partenaires/')
+
+    def __str__(self):
+        return self.nom
+
+class Contact(models.Model):
+    nom = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.CharField(max_length=1000)
