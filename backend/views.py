@@ -31,4 +31,4 @@ def footer(request):
     return render(request, 'footer.html', context)
 
 def contact(request):
-    return (request, 'contact.html')
+    return render(request, 'contact.html')
